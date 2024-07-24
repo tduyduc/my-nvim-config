@@ -1,16 +1,26 @@
 return {
-	"neovim/nvim-lspconfig",
-	init = function()
-		require("lspconfig").tsserver.setup({
-			detached = false,
-			init_options = {
-				preferences = {
-					importModuleSpecifierPreference = "relative",
-				},
-				completions = {
-					completeFunctionCalls = false,
-				},
-			},
-		})
-	end,
+  "neovim/nvim-lspconfig",
+  opts = {
+    inlay_hints = {
+      enabled = false,
+    },
+    servers = {
+      tsserver = {
+        enabled = false,
+      },
+      vtsls = {
+        settings = {
+          complete_function_calls = false,
+          typescript = {
+            suggest = {
+              completeFunctionCalls = false,
+            },
+            preferences = {
+              importModuleSpecifier = "relative",
+            },
+          },
+        },
+      },
+    },
+  },
 }
