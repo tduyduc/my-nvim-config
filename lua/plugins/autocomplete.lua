@@ -13,7 +13,7 @@ return {
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         -- ["<CR>"] = cmp.config.disable,
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
-        ["<Tab>"] = cmp.mapping.confirm({ select = false }),
+        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
       })
     end,
   },
