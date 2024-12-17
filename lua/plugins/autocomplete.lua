@@ -19,7 +19,7 @@ return {
         use_nvim_cmp_as_default = true,
         -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
         -- adjusts spacing to ensure icons are aligned
-        nerd_font_variant = "normal",
+        nerd_font_variant = "mono",
       },
       completion = {
         accept = {
@@ -35,10 +35,17 @@ return {
         },
         documentation = {
           auto_show = true,
-          auto_show_delay_ms = 150,
+          auto_show_delay_ms = 200,
         },
         ghost_text = {
-          enabled = vim.g.ai_cmp,
+          enabled = false,
+        },
+        trigger = {
+          show_on_keyword = false,
+          show_on_trigger_character = false,
+        },
+        list = {
+          selection = "manual",
         },
       },
 
