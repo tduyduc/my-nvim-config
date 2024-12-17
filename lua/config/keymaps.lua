@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap
+map.set({ "n", "v" }, "<leader>co", "<cmd>TSToolsOrganizeImports<cr>", { desc = "Organize Imports" })
