@@ -46,7 +46,10 @@ return {
           show_on_trigger_character = false,
         },
         list = {
-          selection = "manual",
+          selection = {
+            preselect = false,
+            auto_insert = false,
+          },
         },
       },
 
@@ -58,7 +61,6 @@ return {
         -- with blink.compat
         compat = {},
         default = { "copilot", "lsp", "path", "snippets", "buffer" },
-        cmdline = {},
         providers = {
           copilot = {
             name = "copilot",
