@@ -1,7 +1,7 @@
 local wk = require("which-key")
 
 local function pyright_organize_imports()
-  vim.cmd("LspPyrightOrganizeImports")
+  vim.cmd("PyrightOrganizeImports")
 end
 
 wk.add({
